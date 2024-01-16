@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>replit</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href="style.css" rel="stylesheet"  type="text/css">
+</head>
+<body>
+
+
+
+  <div class="mt-3">
+    <label for="numeroInput" class="form-label">Inserisci un numero:</label>
+    <input type="number" class="form-control" id="numeroInput">
+    <button class="btn btn-primary mt-2" onclick="stampaNumeri()">Stampa Numeri</button>
+    <div id="risultato"></div>
+  </div>
+
+  <script>
+    function stampaNumeri() {
+      var numeroInserito = document.getElementById("numeroInput").value;
+
+      if (isNaN(numeroInserito)) {
+        alert("Inserisci un numero valido.");
+        return;
+      }
+
+      numeroInserito = parseInt(numeroInserito);
+
+      var risultato = "Numeri stampati: ";
+
+      for (var i = 1; i <= numeroInserito; i++) {
+        risultato += i + " ";
+      }
+
+      var percentuale10 = numeroInserito * 0.1;
+
+      document.getElementById("risultato").innerHTML = risultato + "<br>10% del numero: " + percentuale10;
+    }
+  </script>
+</div>
+
+</body>
+</html>

@@ -35,11 +35,21 @@
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
-  <li class="nav-link dropdown">
-  <a class"nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-exapanded="false">
-  Grafica 1
-  <a/>
         </li>
+
+       <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Grafica 1
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="grafica1.htm">Es 1 </a></li>
+            <li><a class="dropdown-item" href="grafica2.htm">Es 2 </a></li>
+            <li><a class="dropdown-item" href="grafica3.htm">Es 3 </a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+
         <li class="nav-item">
           <a class="nav-link disabled" aria-disabled="true">Disabled</a>
         </li>

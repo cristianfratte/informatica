@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafica2</title>
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .square {
+            width: 10px;
+            height: 10px;
+            margin: 5px; 
+            border: 1px solid #000; 
+        }
+    </style>
+</head>
+<body>
+    <label for="numDiv">Inserisci il numero di div:</label>
+    <input type="number" id="numDiv" min="1" value="1">
+    <button onclick="creaDiv()">Crea Div</button>
+
+    <script>
+        function creaDiv() {
+            var numeroDiv = document.getElementById('numDiv').value;
+
+            var container = document.body;
+
+            var existingDivs = document.querySelectorAll('.square');
+            existingDivs.forEach(function (div) {
+                container.removeChild(div);
+            });
+
+            for (var i = 0; i < numeroDiv; i++) {
+                var newDiv = document.createElement('div');
+                newDiv.className = 'square';
+                newDiv.style.backgroundColor = getRandomColor();
+                container.appendChild(newDiv);
+            }
+        }
+
+        function getRandomColor() {
+            return '#' + Math.floor(Math.random()*16777215).toString(16);
+        }
+    </script>
+</body>
+</html>
